@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="content">
+            <div class="logo"><a href="#">Portofolio.</a></div>
+            <ul class="menu-list">
+                <div class=" icon cancel-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Skills</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class=" icon menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-wrapper">
+            <div class="about-left">
+                <div class="about-content">
+                    <div>
+                        <div class="shadow">
+                            <div class="about-img">
+                                <img src="icons.jpg" alt="about image">
+                            </div>
+                        </div>
+                        <h1>Yudistiyanto Fauzi</h1>
+                        <h2>Project Manager</h2>
+                    </div>
+                    <ul class="icons">
+                        <li><i class="fab fa-facebook-f"></i></li>
+                        <li><i class="fab fa-twitter"></i></li>
+                        <li><i class="fab fa-instagram"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="about-right">
+                <h1>hi <span>!</span></h1>
+                <h2>Here's download my Curriculum Vitae</h2>
+                <div class="about-btns">
+                    <button type="button" class="btn btn-pink">download CV</button>
+                </div>
+                <div class="about-para">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptas reprehenderit
+                        culpa id omnis nesciunt iusto doloribus numquam incidunt. Quas iusto eaque aspernatur
+                        repellat perferendis facilis obcaecati sunt ipsam. Placeat?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const body = document.querySelector("body");
+        const navbar = document.querySelector(".navbar");
+        const menu = document.querySelector(".menu-list");
+        const menuBtn = document.querySelector(".menu-btn");
+        const cancelBtn = document.querySelector(".cancel-btn");
+        menuBtn.onclick = () => {
+            menu.classList.add("active");
+            menuBtn.classList.add("hide");
+            body.classList.add("disabaledScroll");
+        }
+        cancelBtn.onclick = () => {
+            menu.classList.remove("active");
+            menuBtn.classList.remove("hide");
+            body.classList.remove("disabaledScroll");
+        }
+
+        window.onscroll = () => {
+            this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+        }
+    </script>
+</body>
+
+<body>
+
+</body>
+
+</html>
